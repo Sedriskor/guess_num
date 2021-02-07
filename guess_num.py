@@ -6,14 +6,16 @@
 
 #前置條件
 import random
-r = random.randint(1, 100)
+start = int(input('請決定隨機數字開始範圍：'))#同時轉換資料型態
+end = int(input('請決定隨機數字結束範圍：'))
+
+r = random.randint(start, end)
 count = 0 #已猜次數
 
 #猜數字
 while True:
     count += 1#count = count + 1
-    num = input('請猜數字（1-100）： ')#input會把輸入的東西存成字串
-    num = int(num)#記得轉換資料型態
+    num = int(input('請猜數字： '))#input會把輸入的東西存成字串 同時轉換資料型態
     if num == r:
          print('終於猜對')
          print('已猜', count, '次')
