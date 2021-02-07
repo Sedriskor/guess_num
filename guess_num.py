@@ -6,11 +6,15 @@
 
 #前置條件
 import random
-start = int(input('請決定隨機數字開始範圍：'))#同時轉換資料型態
-end = int(input('請決定隨機數字結束範圍：'))
-
-r = random.randint(start, end)
-count = 0 #已猜次數
+while True:#增加避免輸入錯誤而當掉
+    start = int(input('請決定隨機開始數字：'))#同時轉換資料型態
+    end = int(input('請決定隨機結束數字：'))
+    if end > start:
+        r = random.randint(start, end)
+        count = 0 #已猜次數
+        break
+    else:
+        print('起始數字需小於結束數字')
 
 #猜數字
 while True:
