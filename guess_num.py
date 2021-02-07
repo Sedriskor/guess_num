@@ -7,17 +7,18 @@
 #前置條件
 import random
 r = random.randint(1, 100)
+count = 0 #已猜次數
 
 #猜數字
 while True:
+    count = count + 1
     num = input('請猜數字（1-100）： ')#input會把輸入的東西存成字串
     num = int(num)#記得轉換資料型態
     if num == r:
-         print('終於猜對')
+         print('第', count, '次,終於猜對')
          break
     else:
-    	
         if num > r:
-            print('小於', num)
+            print('小於', num, '已猜第', count, '次')
         else:
-            print('大於', num)
+            print('大於', num, '已猜第', count, '次')
