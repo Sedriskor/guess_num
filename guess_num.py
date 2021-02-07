@@ -11,14 +11,16 @@ count = 0 #已猜次數
 
 #猜數字
 while True:
-    count = count + 1
+    count += 1#count = count + 1
     num = input('請猜數字（1-100）： ')#input會把輸入的東西存成字串
     num = int(num)#記得轉換資料型態
     if num == r:
-         print('第', count, '次,終於猜對')
+         print('終於猜對')
+         print('已猜', count, '次')
          break
     else:
         if num > r:
-            print('小於', num, '已猜第', count, '次')
+            print('小於', num)
         else:
-            print('大於', num, '已猜第', count, '次')
+            print('大於', num)
+    print('已猜', count, '次')#避免重複性太高
